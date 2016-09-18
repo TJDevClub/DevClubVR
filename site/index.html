@@ -20,13 +20,13 @@
 		    <a-asset-item id="puter" src="assets/puter/puter.dae"></a-asset-item>
 		    <a-mixin id="font" text="font: Meslo LG S DZ"></a-mixin>
 	 	</a-assets>
-		<a-entity mixin="font" text="text: Welcome to"
+		<a-entity mixin="font" text="text: Come to"
 				material="color: black"
 				position="-3 .5 -3">
 		</a-entity>
 		<a-entity mixin="font" text="text:Dev Club!;weight:bold" 
 				material="color:black" 
-				position="1.5 .5 -3">
+				position=".4 .5 -3">
 		</a-entity>
 		<a-entity mixin="font" text="text:Wednesdays B Block;weight:normal" 			material="color:#c85cff;shader:flat" 
 				position="-2 0 -2" scale="0.5 0.5 0.5">
@@ -35,13 +35,41 @@
 		<!-- <a-obj-model src="#mac-obj" mtl="#mac-mtl"></a-obj-model> -->
 		<a-collada-model src="#puter" material="" collada-model="url(assets/puter.dae)" position="-3.11 -1 -2.16" scale="0.7 0.7 0.7" rotation="0 40 0"></a-collada-model>
 
-		<a-entity geometry="primitive:box;" material="shader:gif;src:url(assets/hax0r.gif)" position="0 1 4"></a-entity>
+
+		<a-entity geometry="primitive:box;" material="shader:gif;src:url(assets/hax0r.gif)" position="0 1 4">
+			<a-entity position="0 1 4"></a-entity>
+			<a-animation attribute="rotation"
+	               dur="10000"
+	               to="0 360 0"
+	               repeat="indefinite"
+	               easing="linear">
+			</a-animation>
+		</a-entity>
 
 		<a-entity mixin="font" text="text:Become a L33t Hax0r!;weight:bold" 
 				material="color:black" 
 				position="0 0 4"
 				rotation="0 180 0"
 				scale="0.2 0.2 0.2">
+		</a-entity>
+
+		<a-entity geometry="primitive:circle;segments:6" material="shader:gif;src:url(assets/catx0r.gif)" position="5 1 0" rotation="0 -100 0"></a-entity>
+
+		<a-entity mixin="font" text="text:Be a cool cat!;weight:normal" 
+				material="color:#ee5555" 
+				position="5 1 1"
+				rotation="0 -100 0"
+				scale="0.5 0.5 0.5">
+		</a-entity>
+
+
+		<a-entity geometry="primitive:circle;segments:8" material="shader:gif;src:url(assets/css.gif)" position="-5 1 2" rotation="0 60 0" scale="2 2 2"></a-entity>
+
+		<a-entity mixin="font" text="text:Same tho...;weight:normal" 
+				material="color:black" 
+				position="-4.5 -1 2"
+				rotation="0 60 0"
+				scale="0.5 0.5 0.5">
 		</a-entity>
 
 		<a-entity position="0 -.5 1.7">
