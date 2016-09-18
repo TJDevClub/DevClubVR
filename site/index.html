@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dev Club VR</title>
+	<link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+	<script type="text/javascript" src="./assets/js/main.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.3.0/aframe.min.js"></script>
+	<script src="https://rawgit.com/ngokevin/aframe-text-component/master/dist/aframe-text-component.min.js"></script>
+	<script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
+	<script src="assets/js/Meslo LG S DZ_Regular.js"></script>
+	<script src="assets/js/Meslo LG S DZ_Bold.js"></script>
+</head>
+<body>
+
+	<a-scene inspector="url: https://aframe.io/releases/0.3.0/aframe-inspector.min.js">
+
+		<a-entity light="color:#dfdfdf;intensity:1.2;distance:0.1" position="5.1 5 3.14"></a-entity>
+
+		<a-assets>
+		    <a-asset-item id="puter" src="assets/puter/puter.dae"></a-asset-item>
+		    <a-mixin id="font" text="font: Meslo LG S DZ"></a-mixin>
+	 	</a-assets>
+		<a-entity mixin="font" text="text: Welcome to"
+				material="color: black"
+				position="-3 .5 -3">
+		</a-entity>
+		<a-entity mixin="font" text="text:Dev Club!;weight:bold" 
+				material="color:black" 
+				position="1.5 .5 -3">
+		</a-entity>
+		<a-entity mixin="font" text="text:Wednesdays B Block;weight:normal" 			material="color:#c85cff;shader:flat" 
+				position="-2 0 -2" scale="0.5 0.5 0.5">
+		</a-entity>
+		<a-sky color="#eee"></a-sky>
+		<!-- <a-obj-model src="#mac-obj" mtl="#mac-mtl"></a-obj-model> -->
+		<a-collada-model src="#puter" material="" collada-model="url(assets/puter.dae)" position="-3.11 -1 -2.16" scale="0.7 0.7 0.7" rotation="0 40 0"></a-collada-model>
+
+		<a-entity geometry="primitive:box;" material="shader:gif;src:url(assets/hax0r.gif)" position="0 1 4"></a-entity>
+
+		<a-entity mixin="font" text="text:Become a L33t Hax0r!;weight:bold" 
+				material="color:black" 
+				position="0 0 4"
+				rotation="0 180 0"
+				scale="0.2 0.2 0.2">
+		</a-entity>
+
+		<a-entity position="0 -.5 1.7">
+			<a-camera rotation="-1.2605071492878768 -344.69140955070407 0" look-controls=""></a-camera>
+		</a-entity>
+
+	</a-scene>
+</body>
+</html>
